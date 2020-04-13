@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: ArduinoCliInstall@0
+  inputs:
+    version: 'latest'
+
+- task: ArduinoCliCoreUpdateIndex@0
+
+- task: ArduinoCliCoreInstall@0
+  inputs:
+    core: 'arduino:avr'
+
+- task: ArduinoCliBuild@0
+  inputs:
+    fqbn: 'arduino:avr:uno'
+    sketchDir: '$(System.DefaultWorkingDirectory)/Main'
