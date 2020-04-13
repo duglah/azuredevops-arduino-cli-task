@@ -1,0 +1,128 @@
+{
+    "manifestVersion": 1,
+    "id": "arduino-cli",
+    "version": "1.0.0",
+    "name": "arduino-cli",
+    "description": "arduino-cli extension for Azure DevOps",
+    "publisher": "PhilippManstein",
+    "public": true,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "icon.png"
+    },
+    "screenshots": [],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "links": {
+        "support": {
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/duglah/azuredevops-arduino-cli-task.git"
+    },
+    "tags": [
+        "arduino",
+        "esp8266"
+    ],
+    "files": [
+        {
+            "path": "tasks/install"
+        },
+        {
+            "path": "tasks/build"
+        },
+        {
+            "path": "tasks/core_install"
+        },
+        {
+            "path": "tasks/lib_install"
+        },
+        {
+            "path": "tasks/core_update_index"
+        },
+        {
+            "path": "tasks/lib_update_index"
+        },
+        {
+            "path": "images",
+            "addressable": true
+        }
+    ],
+    "contributions": [
+        {
+            "id": "arduino-cli-install",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/install"
+            }
+        },
+        {
+            "id": "arduino-cli-build",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/build"
+            }
+        },
+        {
+            "id": "arduino-cli-core-install",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/core_install"
+            }
+        },
+        {
+            "id": "arduino-cli-lib-install",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/lib_install"
+            }
+        },
+        {
+            "id": "arduino-cli-core-update-index",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/core_update_index"
+            }
+        },
+        {
+            "id": "arduino-cli-lib-update-index",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/lib_update_index"
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+
+node_modules
+.vscode/
+
+# Arduino build files
+*.elf
+*.hex
+
+.taskkey
+
+# Development dirs
+tmp/
+tools/
+
+*.js.map
+.DS_Store
+
+*.vsix
