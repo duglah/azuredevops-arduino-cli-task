@@ -1,6 +1,6 @@
 {
   "name": "vsts-arduino-cli-task-install",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "arduino-cli install",
   "main": "index.js",
   "scripts": {
