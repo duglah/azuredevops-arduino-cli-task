@@ -83,8 +83,8 @@ function findArch() {
         return '64bit';
     else if(os.arch() == 'x32')
         return "32bit";
-    // else if(os.arch() == 'arm')
-    //     return 'arm'; // TODO: ARMv6 or ARMv7
+    else if(os.arch() == 'arm')
+        return 'ARMv7'; // Only support ARMv7, because Azure DevOps only supports ARMv7 agents. See https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-linux?view=azure-devops#check-prerequisites
     else if(os.arch() == 'arm64')
         return "ARM64";
     else
