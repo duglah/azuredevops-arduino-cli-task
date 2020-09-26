@@ -5,6 +5,8 @@ node_modules
 # Arduino build files
 *.elf
 *.hex
+*.bin
+*.eep
 
 .taskkey
 
