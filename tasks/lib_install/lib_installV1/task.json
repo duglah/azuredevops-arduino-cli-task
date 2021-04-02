@@ -8,9 +8,9 @@
     "category": "Utility",
     "author": "PhilippManstein",
     "version": {
-        "Major": 0,
-        "Minor": 1,
-        "Patch": 0
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 2
     },
     "instanceNameFormat": "arduino-cli lib install",
     "inputs": [
