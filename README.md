@@ -15,7 +15,7 @@ Installs arduino-cli to agent, when not installed already.
 
 Example:
 ```yaml
-- task: ArduinoCliInstall@0
+- task: ArduinoCliInstall@1
   inputs:
     version: 'latest'
 ```
