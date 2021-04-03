@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "arduino-cli",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "name": "arduino-cli",
     "description": "arduino-cli extension for Azure DevOps",
     "publisher": "PhilippManstein",
@@ -29,6 +29,18 @@
     "links": {
         "support": {
             "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/issues"
+        },
+        "getstarted": {
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task#example-azure-pipelinesyml"
+        },
+        "learn": {
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task#tasks"
+        },
+        "license": {
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/blob/main/LICENSE"
+        },
+        "privacy":{
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/blob/main/PRIVACY.md"
         }
     },
     "repository": {
@@ -37,7 +49,10 @@
     },
     "tags": [
         "arduino",
-        "esp8266"
+        "esp8266",
+        "esp32",
+        "sketch",
+        "MxChip"
     ],
     "files": [
         {

@@ -187,6 +187,12 @@ steps:
 
 # Changelog
 
+## 1.1.2
+- Update license, add privacy and update extensions uris and tags
+
+## 1.1.1
+- Fix some variables have a value, but they are not required
+
 ## 1.1.0
 - Add more build options to support arduino-cli 0.18.0
 
