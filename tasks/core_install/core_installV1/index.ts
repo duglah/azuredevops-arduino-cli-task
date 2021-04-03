@@ -24,10 +24,42 @@ async function run() {
         let core = task.getInput("core", true);
         args.push(`${core}`);
 
+        let runPostInstall = task.getBoolInput("runPostInstall", false);
+        if(runPostInstall)
+            args.push(`--run-post-install`);
+
+        let skipPostInstall = task.getBoolInput("skipPostInstall", false);
+        if(skipPostInstall)
+            args.push(`--skip-post-install`);
+
         let additionalUrls = task.getInput("additionalUrls", false);
         if(additionalUrls != undefined)
             args.push(`--additional-urls=${additionalUrls}`);
+
+        let configFile = task.getPathInput("configFile", false);
+        if(configFile != undefined)
+            args.push(`--config-file=${configFile}`);
+
+        let format = task.getInput("format", false);
+        if(format != undefined)
+            args.push(`--format=${format}`);
         
+        let logFile = task.getPathInput("logFile", false);
+        if(logFile != undefined)
+            args.push(`--log-file=${logFile}`);
+
+        let logFormat = task.getInput("logFormat", false);
+        if(logFormat != undefined)
+            args.push(`--log-format=${logFormat}`);
+
+        let logLevel = task.getInput("logLevel", false);
+        if(logLevel != undefined)
+            args.push(`--log-level=${logLevel}`);
+
+        let verbose = task.getBoolInput("verbose", false);
+        if(verbose)
+            args.push(`--verbose`);
+
         let result = await task.exec(fullPath, args);
         task.debug(`Executed with args ${args}:  '${result}'`);
         
