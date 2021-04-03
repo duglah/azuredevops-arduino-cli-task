@@ -45,14 +45,6 @@
             "helpMarkDown": "Save build artifacts in this directory. Supported by arduino-cli 0.11.0 and newer. For more information, take a look at the arduino-cli commands [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli/)"
         },
         {
-            "name": "ArdunioCliToolPath",
-            "type": "filePath",
-            "label": "Path to arduino-cli",
-            "defaultValue": "",
-            "helpMarkDown": "Path to the arduino-cli if not using arduino-cli install task before this one.",
-            "required": false
-        },
-        {
             "name": "buildCachePath",
             "type": "filePath",
             "label": "Build cache path",
@@ -198,6 +190,14 @@
             "required": false,
             "groupName": "loggingOptions",
             "helpMarkDown": "Print the logs on the standard output. For more information, take a look at the arduino-cli commands [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli/)"
+        },
+        {
+            "name": "ArdunioCliToolPath",
+            "type": "filePath",
+            "label": "Path to arduino-cli",
+            "defaultValue": "",
+            "helpMarkDown": "Path to the arduino-cli if not using arduino-cli install task before this one.",
+            "required": false
         }
     ],
     "execution": {
