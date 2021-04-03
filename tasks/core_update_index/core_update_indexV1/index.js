@@ -28,13 +28,13 @@ function run() {
             let additionalUrls = task.getInput("additionalUrls", false);
             if (additionalUrls != undefined)
                 args.push(`--additional-urls=${additionalUrls}`);
-            let configFile = task.getPathInput("configFile", false);
+            let configFile = task.getInput("configFile", false);
             if (configFile != undefined)
                 args.push(`--config-file=${configFile}`);
             let format = task.getInput("format", false);
             if (format != undefined)
                 args.push(`--format=${format}`);
-            let logFile = task.getPathInput("logFile", false);
+            let logFile = task.getInput("logFile", false);
             if (logFile != undefined)
                 args.push(`--log-file=${logFile}`);
             let logFormat = task.getInput("logFormat", false);
