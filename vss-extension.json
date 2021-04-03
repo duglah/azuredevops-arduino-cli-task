@@ -39,8 +39,11 @@
         "license": {
             "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/blob/main/LICENSE"
         },
-        "privacy":{
+        "privacypolicy":{
             "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/blob/main/PRIVACY.md"
+        },
+        "repository": {
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task"
         }
     },
     "repository": {
