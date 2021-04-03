@@ -10,39 +10,29 @@ steps:
 # Not recommended to use the version 'latest'!!!
 # arduino-cli has often breaking changes!
 # Check https://github.com/arduino/arduino-cli/issues if something is not working anymore!
-# So set a specific version! Like: 0.9.0
+# So set a specific version! Like: 0.18.0
 - task: ArduinoCliInstall@1
   inputs:
     version: 'latest'
 
 # "The first thing to do upon a fresh install is to update the local cache of available platforms and libraries by running"
 # see "Getting started" https://arduino.github.io/arduino-cli/getting-started/#connect-the-board-to-your-pc
-- task: ArduinoCliCoreUpdateIndex@0
+- task: ArduinoCliCoreUpdateIndex@1
 
 # Install core for 'arduino:avr'
-- task: ArduinoCliCoreInstall@0
+- task: ArduinoCliCoreInstall@1
   inputs:
     core: 'arduino:avr'
 
 # Build Main/Main.ino for fqbn 'arduino:avr:uno'
 # Like every arduino project, the sketch file must be in a directory named the same as the sketch... ¯\_(ツ)_/¯
 # Since arudino cli version 0.10.0 you can't specify a custom path to a sketch file, like 'somedir/someskecht.ino'!
-- task: ArduinoCliBuild@0
+- task: ArduinoCliBuild@1
   inputs:
     fqbn: 'arduino:avr:uno'
     sketchDir: '$(System.DefaultWorkingDirectory)/Main'
+    outputDir: '$(Build.ArtifactStagingDirectory)'
 
-
-# Copy Main.ino.with_bootloader.bin file to the staging directory
-# If you use a different fqbn the file ending may be different
-# and the directory also,
-# so check which files are generated locally
-# Different versions of arduino-cli also generate different files!
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/Main/build/arduino.avr.uno/'
-    Contents: 'Main.ino.with_bootloader.bin'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 # Publish build artifacts
 - task: PublishBuildArtifacts@1
