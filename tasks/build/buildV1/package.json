@@ -1,0 +1,21 @@
+{
+  "name": "vsts-arduino-cli-task-build",
+  "version": "0.1.0",
+  "description": "arduino-cli build",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Philipp Manstein",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.9.3",
+    "azure-pipelines-tool-lib": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.1",
+    "@types/q": "^1.5.2"
+  }
+}
