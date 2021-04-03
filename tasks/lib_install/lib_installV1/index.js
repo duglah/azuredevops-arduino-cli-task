@@ -25,11 +25,56 @@ function run() {
             // arduino-cli lib install LIBRARY[@VERSION_NUMBER](S) [flags]
             let fullPath = path.join(localArduinoCli, ARDUINOCLI_TOOL_NAME);
             var args = ["lib", "install"];
-            let lib = task.getInput("lib", true);
-            args.push(`${lib}`);
+            let installLibBy = task.getInput("installLibBy", true);
+            if (installLibBy == "libName") {
+                let lib = task.getInput("lib", false);
+                if (lib != undefined)
+                    args.push(`${lib}`);
+                else {
+                    task.setResult(task.TaskResult.Failed, "Please specify a library name!");
+                    return;
+                }
+            }
+            else if (installLibBy == "gitUrl") {
+                let gitUrl = task.getInput("gitUrl", false);
+                if (gitUrl != undefined)
+                    args.push(`--git-url=${gitUrl}`);
+                else {
+                    task.setResult(task.TaskResult.Failed, "Please specify a git url!");
+                    return;
+                }
+            }
+            else if (installLibBy == "zipPath") {
+                let zipPath = task.getPathInput("zipPath", false);
+                if (zipPath != undefined)
+                    args.push(`--zip-path=${zipPath}`);
+                else {
+                    task.setResult(task.TaskResult.Failed, "Please specify a zip path!");
+                    return;
+                }
+            }
+            // Options inherited from parent commands
             let additionalUrls = task.getInput("additionalUrls", false);
             if (additionalUrls != undefined)
                 args.push(`--additional-urls=${additionalUrls}`);
+            let configFile = task.getPathInput("configFile", false);
+            if (configFile != undefined)
+                args.push(`--config-file=${configFile}`);
+            let format = task.getInput("format", false);
+            if (format != undefined)
+                args.push(`--format=${format}`);
+            let logFile = task.getPathInput("logFile", false);
+            if (logFile != undefined)
+                args.push(`--log-file=${logFile}`);
+            let logFormat = task.getInput("logFormat", false);
+            if (logFormat != undefined)
+                args.push(`--log-format=${logFormat}`);
+            let logLevel = task.getInput("logLevel", false);
+            if (logLevel != undefined)
+                args.push(`--log-level=${logLevel}`);
+            let verbose = task.getBoolInput("verbose", false);
+            if (verbose)
+                args.push(`--verbose`);
             let result = yield task.exec(fullPath, args);
             task.debug(`Executed with args ${args}:  '${result}'`);
             if (result == 0) {
