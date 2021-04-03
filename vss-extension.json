@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "arduino-cli",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "name": "arduino-cli",
     "description": "arduino-cli extension for Azure DevOps",
     "publisher": "PhilippManstein",
@@ -39,8 +39,11 @@
         "license": {
             "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/blob/main/LICENSE"
         },
-        "privacy":{
+        "privacypolicy":{
             "uri": "https://github.com/duglah/azuredevops-arduino-cli-task/blob/main/PRIVACY.md"
+        },
+        "repository": {
+            "uri": "https://github.com/duglah/azuredevops-arduino-cli-task"
         }
     },
     "repository": {

@@ -187,6 +187,9 @@ steps:
 
 # Changelog
 
+## 1.1.3
+- Add more extensions uris
+
 ## 1.1.2
 - Update license, add privacy and update extensions uris and tags
 
