@@ -9,8 +9,8 @@
     "author": "PhilippManstein",
     "version": {
         "Major": 1,
-        "Minor": 0,
-        "Patch": 2
+        "Minor": 1,
+        "Patch": 0
     },
     "instanceNameFormat": "arduino-cli lib install",
     "groups": [
@@ -31,7 +31,7 @@
                 "zipPath": "Zip path"
             },
             "required": true,
-            "helpMarkDown": "Specify how to install a library. You can choose by name, git url or zip path. Then you can specify the name, url or path in the field right beneath this one. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
+            "helpMarkDown": "Specify how to install a library. You can choose by name `libName`, git url `gitUrl` or zip path `zipPath`. Then you can specify the name, url or path in the field right beneath this one. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
         },
         {
             "name": "lib",
@@ -39,7 +39,7 @@
             "label": "Library name",
             "required": false,
             "visibleRule": "installLibBy = libName",
-            "helpMarkDown": "Name of lib. `AudioZero` for latest verion, `AudioZero@1.0.0` for specific verion. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
+            "helpMarkDown": "Name of lib. `AudioZero` for latest verion, `AudioZero@1.0.0` for specific verion. Can only be used, when `installLibBy` is `libName`. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
         },
         {
             "name": "gitUrl",
@@ -47,7 +47,7 @@
             "label": "Git url",
             "required": false,
             "visibleRule": "installLibBy = gitUrl",
-            "helpMarkDown": "Enter git url for libraries hosted on repositories. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
+            "helpMarkDown": "Enter git url for libraries hosted on repositories. Can only be used, when `installLibBy` is `gitUrl`. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
         },
         {
             "name": "zipPath",
@@ -55,7 +55,7 @@
             "label": "Zip path",
             "required": false,
             "visibleRule": "installLibBy = zipPath",
-            "helpMarkDown": "Enter a path to zip file. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
+            "helpMarkDown": "Enter a path to zip file. Can only be used, when `installLibBy` is `zipPath`. For more information, take a look at the arduino-cli lib install command [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli_lib_install/)"
         },
         {
             "name": "additionalUrls",

@@ -9,8 +9,8 @@
     "author": "PhilippManstein",
     "version": {
         "Major": 1,
-        "Minor": 0,
-        "Patch": 2
+        "Minor": 1,
+        "Patch": 0
     },
     "instanceNameFormat": "arduino-cli compile",
     "groups": [
@@ -27,7 +27,7 @@
             "label": "Fully Qualified Board Name",
             "defaultValue": "arduino:avr:uno",
             "required": true,
-            "helpMarkDown": "Fully Qualified Board Name, e.g.: arduino:avr:uno . For infos see [here](https://arduino.github.io/arduino-cli/commands/arduino-cli_compile/#options)"
+            "helpMarkDown": "Fully Qualified Board Name, e.g.: `arduino:avr:uno`. For infos see [here](https://arduino.github.io/arduino-cli/commands/arduino-cli_compile/#options)"
         },
         {
             "name": "sketchDir",
@@ -35,7 +35,7 @@
             "label": "Path to sketch directory",
             "defaultValue": "$(System.DefaultWorkingDirectory)/Path/To/Sketch",
             "required": true,
-            "helpMarkDown": "For example: \"$(System.DefaultWorkingDirectory)/MySketch\", when a sketch is located in \"$(System.DefaultWorkingDirectory)/MySketch/MySketch.ino\". For infos see [here](https://arduino.github.io/arduino-cli/commands/arduino-cli_compile/#options)"
+            "helpMarkDown": "Path to sketch directory. For example: `$(System.DefaultWorkingDirectory)/MySketch`, when a sketch is located in `$(System.DefaultWorkingDirectory)/MySketch/MySketch.ino`. For infos see [here](https://arduino.github.io/arduino-cli/commands/arduino-cli_compile/#options)"
         },
         {
             "name": "outputDir",
@@ -84,7 +84,7 @@
             "type": "string",
             "label": "Custom libraries",
             "required": false,
-            "helpMarkDown": "List of custom libraries paths separated by commas. Or can be used multiple times for multiple libraries paths. For more information, take a look at the arduino-cli commands [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli/)"
+            "helpMarkDown": "List of custom libraries paths separated by commas. For more information, take a look at the arduino-cli commands [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli/)"
         },
         {
             "name": "onlyCompilationDatabase",
@@ -118,7 +118,7 @@
                 "all": "all"
             },
             "required": false,
-            "helpMarkDown": "Optional, can be \"none\", \"default\", \"more\" and \"all\". Defaults to \"none\". Used to tell gcc which warning level to use (-W flag). (default \"none\").For more information, take a look at the arduino-cli commands [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli/)"
+            "helpMarkDown": "Optional, can be `none`, `default`, `more` and `all`. Defaults to `none`. Used to tell gcc which warning level to use (-W flag). (default `none`).For more information, take a look at the arduino-cli commands [documentation](https://arduino.github.io/arduino-cli/commands/arduino-cli/)"
         },
         {
             "name": "additionalUrls",
