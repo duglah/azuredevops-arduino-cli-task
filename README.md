@@ -130,14 +130,14 @@ Example:
 
 ## Example azure-pipelines.yml
 
-[![Build Status](https://dev.azure.com/pmanstein/azuredevops-arduino-cli-task/_apis/build/status/duglah.azuredevops-arduino-cli-task?branchName=master)](https://dev.azure.com/pmanstein/azuredevops-arduino-cli-task/_build/latest?definitionId=7&branchName=master)
+[![Build Status](https://dev.azure.com/pmanstein/azuredevops-arduino-cli-task/_apis/build/status/duglah.azuredevops-arduino-cli-task?branchName=main)](https://dev.azure.com/pmanstein/azuredevops-arduino-cli-task/_build/latest?definitionId=7&branchName=main)
 
 Basic example script for building [Blink example](Main/Main.ino) on Azure DevOps for Arduino Uno. 
 See [azure-pipelines.yml](azure-pipelines.yml):
 ```yaml
 # Sample azure cli to build and publish Arduino Blink example for the Arduino Uno board
 trigger:
-  - master
+  - main
   
 pool:
   vmImage: 'ubuntu-latest'
@@ -179,7 +179,7 @@ steps:
     publishLocation: 'Container'
 ```
 
-1. Pipeline triggers on commit on `master` on `ubuntu-latest``
+1. Pipeline triggers on commit on `main` on `ubuntu-latest``
 2. Installs latest arduino-cli with task `ArduinoCliInstall@1`
 3. "The first thing to do upon a fresh install is to update the local cache of available platforms and libraries by running" [Getting started](https://arduino.github.io/arduino-cli/getting-started/#connect-the-board-to-your-pc), so run task `ArduinoCliCoreUpdateIndex@1`
 4. Install core for `arduino:avr` in task `ArduinoCliCoreInstall@1`

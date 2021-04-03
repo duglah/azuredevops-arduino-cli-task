@@ -1,6 +1,6 @@
 # Sample azure cli to build and publish Arduino Blink example for the Arduino Uno board
 trigger:
-  - master
+  - main
   
 pool:
   vmImage: 'ubuntu-latest'
