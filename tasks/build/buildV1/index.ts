@@ -24,17 +24,17 @@ async function run() {
         let fqbn = task.getInput("fqbn", true);
         args.push(`--fqbn=${fqbn}`);
 
-        let outputDir = task.getPathInput("outputDir", false);
+        let outputDir = task.getInput("outputDir", false);
         if(outputDir != undefined)
             args.push(`--output-dir=${outputDir}`);
 
         // Options
 
-        let buildCachePath = task.getPathInput("buildCachePath", false);
+        let buildCachePath = task.getInput("buildCachePath", false);
         if(buildCachePath != undefined)
             args.push(`--build-cache-path=${buildCachePath}`);
 
-        let buildPath = task.getPathInput("buildPath", false);
+        let buildPath = task.getInput("buildPath", false);
         if(buildPath != undefined)
             args.push(`--build-path=${buildPath}`);
 
@@ -76,7 +76,7 @@ async function run() {
         if(additionalUrls != undefined)
             args.push(`--additional-urls=${additionalUrls}`);
 
-        let configFile = task.getPathInput("configFile", false);
+        let configFile = task.getInput("configFile", false);
         if(configFile != undefined)
             args.push(`--config-file=${configFile}`);
 
@@ -84,7 +84,7 @@ async function run() {
         if(format != undefined)
             args.push(`--format=${format}`);
         
-        let logFile = task.getPathInput("logFile", false);
+        let logFile = task.getInput("logFile", false);
         if(logFile != undefined)
             args.push(`--log-file=${logFile}`);
 
